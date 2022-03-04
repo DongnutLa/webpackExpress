@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://zen-pasteur-b4536f.netlify.app/'
+  origin: 'https://6221875a0fdeb700085471b2--zen-pasteur-b4536f.netlify.app/'
 }
 app.use(cors(corsOptions));
 
