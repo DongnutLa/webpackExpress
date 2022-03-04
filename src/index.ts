@@ -4,6 +4,13 @@ import { Request, Response} from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
+const cors = require('cors');
+
+const corsOptions = {
+  origin: 'https://zen-pasteur-b4536f.netlify.app/'
+}
+app.use(cors(corsOptions));
+
 const initialState = {
     cart: [],
     products: [
@@ -57,7 +64,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.get('/api/v1', (req: Request, res: Response) => {
-    res.json(initialState);
+    res.json(initialState.products);
 })
 
 app.listen(port, () => {
